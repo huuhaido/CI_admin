@@ -9,5 +9,10 @@ if($menu){
 		}
 		if(substr($perm[0]->permission,$pos+2,3)!='---'){
 ?>
-<li class="<?php if($this->uri->segment(2)==$v->name_function){ print 'active'; }?>"><a href="<?=PATH_URL_ADMIN.''.$v->name_function.'/'?>"><i class="icon-docs"></i><span class="title"><?=$v->name?></span></a></li>
+<li class="<?php if($this->uri->segment(2)==$v->name_function){ print 'active'; }?>">
+    <a href="<?=PATH_URL_ADMIN.''.$v->name_function.'/'?>">
+        <i class="icon-docs"></i>
+        <span class="title"><?=$v->name?></span>
+    </a>
+</li>
 <?php }}} ?>
