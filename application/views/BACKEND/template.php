@@ -113,14 +113,7 @@
                     </div>
                     <!-- END SIDEBAR TOGGLER BUTTON -->
                 </li>
-                <!--<li class="start<?php if ($this->uri->segment(2) == '') {
-                    print ' active';
-                } ?>"><a href="<?= PATH_URL_ADMIN ?>"><i class="icon-home"></i><span class="title">Dashboard</span></a></li>-->
                 <?= modules::run('admincp/menu') ?>
-                <!--<li class="last<?php if ($this->uri->segment(2) == 'setting') {
-                    print ' active';
-                } ?>"><a href="<?= PATH_URL_ADMIN . 'setting' ?>"><i class="icon-settings"></i><span class="title">Settings</span></a>
-                </li>-->
             </ul>
             <!-- END SIDEBAR MENU -->
         </div>
