@@ -14,7 +14,7 @@ class Home extends MX_Controller {
 		$data['introduce'] = $this->Static_pages_model->getData('gioi-thieu-ve-dong-shop-sun');
 		
 		$this->template->write('title','Yamato');
-		if (empty($data))
+		if ($data['result']&&$data['introduce'])
 		    $this->template->write_view('content','index',$data);
 		$this->template->render();
 	}
@@ -22,7 +22,8 @@ class Home extends MX_Controller {
 		$this->load->model('Static_pages/Static_pages_model');
 		$data['result'] = $this->Static_pages_model->getData('thu-tuc-thuc-hien');//var_dump($data['introduce']);exit();
 		$this->template->write('title','Yamato');
-		$this->template->write_view('content','procedure',$data);
+        if ($data['result'])
+		    $this->template->write_view('content','procedure',$data);
 		$this->template->render();
 	}
 

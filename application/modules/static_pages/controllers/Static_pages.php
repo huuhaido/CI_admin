@@ -144,7 +144,8 @@ class Static_pages extends MX_Controller {
     public function index(){
         $data['result'] = $this->model->getData();
         $this->template->write('title','Thủ tục thực hiện');
-        $this->template->write_view('content','index',$data);
+        if ($data['result'])
+            $this->template->write_view('content','index',$data);
         $this->template->render();
     }
     /*------------------------------------ End FRONTEND --------------------------------*/

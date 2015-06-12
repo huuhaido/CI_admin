@@ -184,7 +184,8 @@ class Branch extends MX_Controller {
 	public function index(){
 		$data['result'] = $this->model->getData();
 		$this->template->write('title','Yamato');
-		$this->template->write_view('content','FRONTEND/index',$data);
+        if ($data['result'])
+		    $this->template->write_view('content','FRONTEND/index',$data);
 		$this->template->render();
 	}
 	/*------------------------------------ End FRONTEND --------------------------------*/
